@@ -1,0 +1,12 @@
+sharedmobility\IssueRepository.class
+sharedmobility\IssueController.class
+sharedmobility\KeyGenerated.class
+sharedmobility\PolicyHandler.class
+sharedmobility\config\kafka\KafkaProcessor.class
+sharedmobility\Issue.class
+sharedmobility\IssueApplication.class
+sharedmobility\AccessCanceled.class
+sharedmobility\PaymentApproved.class
+sharedmobility\IssueCanceled.class
+sharedmobility\AbstractEvent$1.class
+sharedmobility\AbstractEvent.class
