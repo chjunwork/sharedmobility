@@ -90,7 +90,7 @@ phases:
                         cpu: 200m
                     readinessProbe:
                       httpGet:
-                        path: /actuator/nohealth
+                        path: /actuator/health
                         port: 8080
                       initialDelaySeconds: 10
                       timeoutSeconds: 2
