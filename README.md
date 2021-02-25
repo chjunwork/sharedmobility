@@ -195,5 +195,13 @@ AWS CodeBuild 를 사용하였으며, buildspec.yml를 사용하여 pipeline 을
 ![codebuild5](https://user-images.githubusercontent.com/76153097/109092003-29157980-7759-11eb-8924-84b524c01a88.png)
 ![codebuild_result](https://user-images.githubusercontent.com/76153097/109092012-2b77d380-7759-11eb-8139-c652c7d3c47a.png)
 
+### Circuit Breaker
+
+Hystrix를 적용하였으며 siege를 통해 부하를 발생 시켜 Circuit Breaker가 정상적으로 동작하는지 확인한다.
+일정 수준 이상의 부하가 발생하면 일부 요청은 처리를 하지 않고 서비스가 down 되지 않도록 유지한다.
+
+![hystrix_config](https://user-images.githubusercontent.com/76153097/109093434-b22db000-775b-11eb-9ba7-70953872c12c.png)
+![siege_result](https://user-images.githubusercontent.com/76153097/109093468-bf4a9f00-775b-11eb-9cdc-83edea622770.png)
+
 
 
