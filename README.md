@@ -169,8 +169,10 @@ Mypage는 hsqldb 를 사용하여도 조회가 가능하다.
 ![access_mypage](https://user-images.githubusercontent.com/76153097/109089769-2022a900-7755-11eb-9ed6-592459530ec7.png)
 
 ### REQ/RES
+
 동기식 호출 서비스로 결제 서비스에 이상이 있을 경우 신청이 되지 않는다.
 
+![feignclient](https://user-images.githubusercontent.com/76153097/109095356-e35baf80-775e-11eb-9416-cc0fba104e1f.png)
 ![payment_down_sync](https://user-images.githubusercontent.com/76153097/109089998-9f17e180-7755-11eb-9724-a9f0bec387ec.png)
 ![payment_down_confirm](https://user-images.githubusercontent.com/76153097/109090003-a17a3b80-7755-11eb-9edf-3820d475d946.png)
 ![sync_failed](https://user-images.githubusercontent.com/76153097/109090014-a50dc280-7755-11eb-8374-15dfd5f9fd9d.png)
