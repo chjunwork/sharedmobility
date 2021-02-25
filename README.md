@@ -31,7 +31,7 @@
 # 헥사고날 아키텍처
 ![hexago](https://user-images.githubusercontent.com/76153097/109088813-77c01500-7753-11eb-9cf7-731fe8727a89.png)
 
-# 구현:
+# 구현
 
 분석/설계 단계에서 도출된 헥사고날 아키텍처에 따라, 각 BC별로 대변되는 마이크로 서비스들을 스프링부트와 파이선으로 구현하였다. 구현한 각 서비스를 로컬에서 실행하는 방법은 아래와 같다 (각자의 포트넘버는 8081 ~ 808n 이다)
 
@@ -117,4 +117,17 @@ public class Mobility {
 
 ![cancel_mypage](https://user-images.githubusercontent.com/76153097/109089794-29137a80-7755-11eb-94da-9fcf742bc575.png)
 
+### REQ/RES
+동기식 호출 서비스로 결제 서비스에 이상이 있을 경우 신청이 되지 않는다.
+
+![payment_down_sync](https://user-images.githubusercontent.com/76153097/109089998-9f17e180-7755-11eb-9724-a9f0bec387ec.png)
+![payment_down_confirm](https://user-images.githubusercontent.com/76153097/109090003-a17a3b80-7755-11eb-9edf-3820d475d946.png)
+![sync_failed](https://user-images.githubusercontent.com/76153097/109090014-a50dc280-7755-11eb-8374-15dfd5f9fd9d.png)
+
+### Async Event-Driven 장애 격리
+Key 발급 서비스가 내려가 있더라도 신청과 결제는 정상적으로 서비스를 한다.
+
+![issue_down_async](https://user-images.githubusercontent.com/76153097/109090236-046bd280-7756-11eb-815f-6f3170720a3f.png)
+![service_ok_async](https://user-images.githubusercontent.com/76153097/109090247-0766c300-7756-11eb-87e5-fe9e988e42fb.png)
+![after_issue_up_async](https://user-images.githubusercontent.com/76153097/109090251-09c91d00-7756-11eb-9758-0ea92f9915b8.png)
 
