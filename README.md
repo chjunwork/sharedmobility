@@ -234,4 +234,27 @@ http-get prove로 상태 체크를 하여 정상이 아닌 pod에 대해 restart
 ![live_read](https://user-images.githubusercontent.com/76153097/109094177-e81f6400-775c-11eb-87a5-5dbb8a4c1790.png)
 ![liveness_restart](https://user-images.githubusercontent.com/76153097/109094188-e9e92780-775c-11eb-98e3-faf1cd900295.png)
 
+### Configmap
+
+configmap 설정
+
+```
+# configmap.yml
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mycm
+  namespace: sharedmobility
+data:
+  text1: Hello CM
+
+```
+buildspec 추가
+
+![configmap_buildspec](https://user-images.githubusercontent.com/76153097/109104687-c8de0200-776f-11eb-9a22-f532ff8e73fb.png)
+
+configmap 설정 값 출력
+
+![configmap_result](https://user-images.githubusercontent.com/76153097/109104692-cbd8f280-776f-11eb-88eb-d2f2bc648ee7.png)
 
