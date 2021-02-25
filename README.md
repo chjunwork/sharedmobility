@@ -209,11 +209,25 @@ CPU Limit을 20%로 설정하고 최대 10개까지 pod가 생성 되도록 설�
 
 ![hpa_autoscale_status_before](https://user-images.githubusercontent.com/76153097/109093639-08025800-775c-11eb-95a7-1f951b5f3605.png)
 
-부하 발생 전
+요청이 증가하기 전 상태.
 ![before_hpa_test](https://user-images.githubusercontent.com/76153097/109093648-0d5fa280-775c-11eb-87c0-5aebda48a7b0.png)
 
-부하가 발생하면서 replicas 가 증가한다.
+요청이 증가하면서 replicas 가 증가한다.
 ![after_hpa_test](https://user-images.githubusercontent.com/76153097/109093655-0fc1fc80-775c-11eb-8fff-6ad2c673b0a2.png)
 
+### 무정지 배포 Readiness
+
+서비스 중 배포가 되면 Readiness check를 통해 서비스가 준비 상태가 될 때까지 제외 시킨다.
+
+![after_codebuild_restarting](https://user-images.githubusercontent.com/76153097/109094142-db9b0b80-775c-11eb-9109-e17a57d6e5ff.png)
+![after_codebuild_running](https://user-images.githubusercontent.com/76153097/109094149-ddfd6580-775c-11eb-9af1-3c8f3ca94d0b.png)
+
+### Livenesss
+
+http-get prove로 상태 체크를 하여 정상이 아닌 pod에 대해 restart를 시도한다.
+
+![liveness_probe](https://user-images.githubusercontent.com/76153097/109094168-e5247380-775c-11eb-80cd-73f09c742e50.png)
+![live_read](https://user-images.githubusercontent.com/76153097/109094177-e81f6400-775c-11eb-87a5-5dbb8a4c1790.png)
+![liveness_restart](https://user-images.githubusercontent.com/76153097/109094188-e9e92780-775c-11eb-98e3-faf1cd900295.png)
 
 
