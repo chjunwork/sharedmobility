@@ -186,12 +186,11 @@ Key 발급 서비스가 내려가 있더라도 신청과 결제는 정상적으�
 
 AWS CodeBuild 를 사용하였으며, buildspec.yml를 사용하여 pipeline 을 구성한다.
 
-![rolebinding](https://user-images.githubusercontent.com/76153097/109092061-3fbbd080-7759-11eb-9f2f-b1d5d5efd936.png)
-![token4cicd](https://user-images.githubusercontent.com/76153097/109092068-421e2a80-7759-11eb-9696-3b1eac312535.png)
-
 ![codebuild1](https://user-images.githubusercontent.com/76153097/109091970-1ef37b00-7759-11eb-96cf-11712a7ee93f.png)
 ![codebuild2](https://user-images.githubusercontent.com/76153097/109091981-2155d500-7759-11eb-91e2-f6d5863bc29d.png)
 ![codebuild3](https://user-images.githubusercontent.com/76153097/109091989-231f9880-7759-11eb-89fe-24090a062029.png)
+![rolebinding](https://user-images.githubusercontent.com/76153097/109092061-3fbbd080-7759-11eb-9f2f-b1d5d5efd936.png)
+![token4cicd](https://user-images.githubusercontent.com/76153097/109092068-421e2a80-7759-11eb-9696-3b1eac312535.png)
 ![codebuild4](https://user-images.githubusercontent.com/76153097/109091994-2581f280-7759-11eb-80fc-3a17b1ade347.png)
 ![codebuild5](https://user-images.githubusercontent.com/76153097/109092003-29157980-7759-11eb-8924-84b524c01a88.png)
 ![codebuild_result](https://user-images.githubusercontent.com/76153097/109092012-2b77d380-7759-11eb-8139-c652c7d3c47a.png)
