@@ -203,5 +203,11 @@ Hystrix를 적용하였으며 siege를 통해 부하를 발생 시켜 Circuit Br
 ![hystrix_config](https://user-images.githubusercontent.com/76153097/109093434-b22db000-775b-11eb-9ba7-70953872c12c.png)
 ![siege_result](https://user-images.githubusercontent.com/76153097/109093468-bf4a9f00-775b-11eb-9cdc-83edea622770.png)
 
+### Autoscale(HAP)
+
+![hpa_autoscale_status_before](https://user-images.githubusercontent.com/76153097/109093639-08025800-775c-11eb-95a7-1f951b5f3605.png)
+![before_hpa_test](https://user-images.githubusercontent.com/76153097/109093648-0d5fa280-775c-11eb-87c0-5aebda48a7b0.png)
+![after_hpa_test](https://user-images.githubusercontent.com/76153097/109093655-0fc1fc80-775c-11eb-8fff-6ad2c673b0a2.png)
+
 
 
