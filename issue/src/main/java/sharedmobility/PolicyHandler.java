@@ -30,6 +30,8 @@ public class PolicyHandler{
             int key = rand.nextInt(10000);
 
             System.out.println("##### key value  : " + key);
+            
+            System.out.println("###### Config Value : " + System.getenv("DATA1"));
 
             Issue issue = new Issue();
 
