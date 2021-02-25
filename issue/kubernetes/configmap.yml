@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mycm
+  namespace: sharedmobility
+data:
+  text1: Hello CM
