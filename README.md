@@ -209,10 +209,12 @@ CPU Limit을 20%로 설정하고 최대 10개까지 pod가 생성 되도록 설�
 
 ![hpa_autoscale_status_before](https://user-images.githubusercontent.com/76153097/109093639-08025800-775c-11eb-95a7-1f951b5f3605.png)
 
-요청이 증가하기 전 상태.
+요청이 증가하기 전 상태
+
 ![before_hpa_test](https://user-images.githubusercontent.com/76153097/109093648-0d5fa280-775c-11eb-87c0-5aebda48a7b0.png)
 
 요청이 증가하면서 replicas 가 증가한다.
+
 ![after_hpa_test](https://user-images.githubusercontent.com/76153097/109093655-0fc1fc80-775c-11eb-8fff-6ad2c673b0a2.png)
 
 ### 무정지 배포 Readiness
