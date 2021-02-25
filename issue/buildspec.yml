@@ -83,6 +83,12 @@ phases:
                     imagePullPolicy: Always
                     ports:
                       - containerPort: 8080
+                    env:                      
+                      - name: DATA1
+                        valueFrom:
+                          configMapKeyRef:
+                            name: mycm
+                            key: text1
                     resources:
                       limits:
                         cpu: 500m
