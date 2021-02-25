@@ -103,6 +103,50 @@ public class Mobility {
 }
 
 ```
+### API Gateway 적용
+API Gateway를 통하여 동일 진입점으로 진입하여 각 마이크로 서비스를 접근할 수 있다. 외부에서 접근을 위하여 Gateway의 Service는 LoadBalancer Type으로 생성했다
+
+```
+# Application.yml
+
+spring:
+  profiles: docker
+  cloud:
+    gateway:
+      routes:
+        - id: mobility
+          uri: http://mobility:8080
+          predicates:
+            - Path=/mobilities/** 
+        - id: issue
+          uri: http://issue:8080
+          predicates:
+            - Path=/issues/** 
+        - id: payment
+          uri: http://payment:8080
+          predicates:
+            - Path=/payments/** 
+        - id: mypage
+          uri: http://mypage:8080
+          predicates:
+            - Path= /mypages/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+server:
+  port: 8080
+```
+
+
+
 ### REST API 적용 테스트 및 SAGA Pattern, CQRS, Correlation
 
 ![access](https://user-images.githubusercontent.com/76153097/109089498-b5716d80-7754-11eb-96ef-a354af2dfa7d.png)
@@ -117,6 +161,13 @@ public class Mobility {
 
 ![cancel_mypage](https://user-images.githubusercontent.com/76153097/109089794-29137a80-7755-11eb-94da-9fcf742bc575.png)
 
+### Polyglot 
+
+Mypage는 hsqldb 를 사용하여도 조회가 가능하다.
+
+![polyglot_hsqldb](https://user-images.githubusercontent.com/76153097/109091427-1e0e1980-7758-11eb-840f-34b58b21f46a.png)
+![access_mypage](https://user-images.githubusercontent.com/76153097/109089769-2022a900-7755-11eb-9ed6-592459530ec7.png)
+
 ### REQ/RES
 동기식 호출 서비스로 결제 서비스에 이상이 있을 경우 신청이 되지 않는다.
 
@@ -130,4 +181,5 @@ Key 발급 서비스가 내려가 있더라도 신청과 결제는 정상적으�
 ![issue_down_async](https://user-images.githubusercontent.com/76153097/109090236-046bd280-7756-11eb-815f-6f3170720a3f.png)
 ![service_ok_async](https://user-images.githubusercontent.com/76153097/109090247-0766c300-7756-11eb-87e5-fe9e988e42fb.png)
 ![after_issue_up_async](https://user-images.githubusercontent.com/76153097/109090251-09c91d00-7756-11eb-9758-0ea92f9915b8.png)
+
 
